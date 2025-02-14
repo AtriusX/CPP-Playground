@@ -27,6 +27,6 @@ namespace math_ops {
         const Operator& op,
         const double& first,
         const double& second,
-        std::function<double(double, double)> func
+        const std::function<double(double, double)>& func
     );
 }

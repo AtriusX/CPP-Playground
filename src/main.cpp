@@ -10,15 +10,15 @@ void exitMessage() {
 
 int main() {
     std::string action;
-    
+
     while (true) {
         utils::getAction(&action, "Input action (calc, exit)");
 
         if (action == "calc") {
             calculator();
             continue;
-        } 
-        
+        }
+
         if (action == "exit") {
             exitMessage();
             break;
@@ -31,7 +31,8 @@ int main() {
 }
 
 void calculator() {
-    double first, second;
+    double first;
+    double second;
     math_ops::Operator op;
 
     utils::getInput(&first, "Input your first number");

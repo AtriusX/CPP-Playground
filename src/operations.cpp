@@ -24,7 +24,7 @@ void math_ops::calc(
     const Operator& op,
     const double& first,
     const double& second,
-    std::function<double(double, double)> func
+    const std::function<double(double, double)>& func
 ) {
     double result = func(first, second);
     std::cout << first << ' ' << op << ' ' << second << " = " << result << std::endl;

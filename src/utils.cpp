@@ -21,7 +21,7 @@ void utils::getOperator(math_ops::Operator* op) {
             continue;
         }
 
-        switch (auto& c = opChar[0]) {
+        switch (const auto& c = opChar[0]) {
             case math_ops::Operator::ADD:
             case math_ops::Operator::SUB:
             case math_ops::Operator::MUL:
@@ -36,10 +36,10 @@ void utils::getOperator(math_ops::Operator* op) {
 }
 
 void utils::lowercase(std::string& data) {
-    std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+    std::ranges::transform(data, data.begin(), ::tolower);
 }
 
-void utils::getAction(std::string* data, std::string message) {
+void utils::getAction(std::string* data, const std::string& message) {
     std::cout << message << ": ";
     std::getline(std::cin, *data);
     utils::lowercase(*data);
