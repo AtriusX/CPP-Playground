@@ -8,11 +8,14 @@
 
 namespace utils {
 
+    void flushCinBuffer();
+
     template <typename T>
     void getInput(T* data, std::string message) {
         while (true) {
             std::cout << message << ": ";
             std::cin >> *data;
+            utils::flushCinBuffer();
 
             if (!std::cin.fail()) {
                 break;

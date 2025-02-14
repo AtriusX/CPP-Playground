@@ -1,4 +1,6 @@
 #include "errors.hpp"
+#include "utils.hpp"
+
 #include <limits>
 
 void errors::divideByZeroError() {
@@ -11,8 +13,7 @@ void errors::invalidOperationError() {
 
 void errors::badInput() {
     std::cout << "Bad input, retry!" << std::endl;
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    utils::flushCinBuffer();
 }
 
 void errors::invalidActionError() {

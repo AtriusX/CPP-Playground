@@ -1,6 +1,14 @@
 #include "utils.hpp"
 #include "errors.hpp"
+
+#include <limits>
+#include <ranges>
 #include <algorithm>
+
+void utils::flushCinBuffer() {
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
 
 void utils::getOperator(math_ops::Operator* op) {
     std::string opChar;
