@@ -1,0 +1,41 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "Debug",
+            "hidden": false,
+            "description": "Debug build",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${workspaceFolder}/build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+            }
+        },
+        {
+            "name": "Release",
+            "hidden": false,
+            "description": "Release build",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${workspaceFolder}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Debug",
+            "description": "Debug Preset",
+            "displayName": "Debug",
+            "configurePreset": "Debug"
+        },
+        {
+            "name": "Release",
+            "description": "Release Preset",
+            "displayName": "Release",
+            "configurePreset": "Release"
+        }
+    ]
+}
