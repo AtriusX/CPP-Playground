@@ -28,6 +28,4 @@ namespace utils {
     void getOperator(math_ops::Operator* op);
 
     void lowercase(std::string& data);
-
-    void getAction(std::string* data, const std::string& message);
 }

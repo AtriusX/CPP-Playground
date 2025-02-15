@@ -8,6 +8,7 @@ add_executable(CPPPlayground
     src/main.cpp
     src/operations.cpp
     src/utils.cpp
-    src/errors.cpp)
+    src/errors.cpp
+    src/actions.cpp)
 
 set_property(TARGET CPPPlayground PROPERTY CXX_STANDARD 20)

@@ -38,9 +38,3 @@ void utils::getOperator(math_ops::Operator* op) {
 void utils::lowercase(std::string& data) {
     std::ranges::transform(data, data.begin(), ::tolower);
 }
-
-void utils::getAction(std::string* data, const std::string& message) {
-    std::cout << message << ": ";
-    std::getline(std::cin, *data);
-    utils::lowercase(*data);
-}
