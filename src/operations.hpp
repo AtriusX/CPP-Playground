@@ -23,10 +23,14 @@ namespace math_ops {
 
     double rem(double a, double b);
 
+    template <typename F>
     void calc(
         const Operator& op,
         const double& first,
         const double& second,
-        const std::function<double(double, double)>& func
-    );
+        F&& func
+    ) {
+        double result = func(first, second);
+        std::cout << first << ' ' << op << ' ' << second << " = " << result << std::endl;
+    }
 }

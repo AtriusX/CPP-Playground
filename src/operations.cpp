@@ -19,13 +19,3 @@ double math_ops::div(double a, double b) {
 double math_ops::rem(double a, double b) {
     return (long) a % (long) b;
 }
-
-void math_ops::calc(
-    const Operator& op,
-    const double& first,
-    const double& second,
-    const std::function<double(double, double)>& func
-) {
-    double result = func(first, second);
-    std::cout << first << ' ' << op << ' ' << second << " = " << result << std::endl;
-}
