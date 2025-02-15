@@ -7,12 +7,12 @@ int main() {
     while (true) {
         actions::getAction(&action, "Input action (calc, exit)");
 
-        if (action == "calc") {
+        if (action == "calc" || action == "c") {
             actions::calculator();
             continue;
         }
 
-        if (action == "exit") {
+        if (action == "exit" || action == "e") {
             actions::exitApp();
             break;
         }
