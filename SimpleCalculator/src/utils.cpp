@@ -14,7 +14,7 @@ void utils::getOperator(math_ops::Operator* op) {
     std::string opChar;
 
     while (true) {
-        utils::getInput(&opChar, "Input operator (+, -, *, /, %)");
+        utils::getInput(&opChar, "Input operator (+, -, *, /, %, ^)");
 
         if (opChar.length() != 1) {
             errors::invalidOperationError();
@@ -27,6 +27,7 @@ void utils::getOperator(math_ops::Operator* op) {
             case math_ops::Operator::MUL:
             case math_ops::Operator::DIV:
             case math_ops::Operator::REM:
+            case math_ops::Operator::EXP:
                 *op = (math_ops::Operator) c;
                 return;
             default:

@@ -21,3 +21,7 @@ double math_ops::div(double a, double b) {
 double math_ops::rem(double a, double b) {
     return std::fmod(a, b); 
 }
+
+double math_ops::exp(double a, double b) {
+    return std::pow(a, b);
+}

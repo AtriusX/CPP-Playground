@@ -11,6 +11,7 @@ namespace math_ops {
         MUL = '*',
         DIV = '/',
         REM = '%',
+        EXP = '^',
     };
 
     double add(double a, double b);
@@ -22,6 +23,8 @@ namespace math_ops {
     double div(double a, double b);
 
     double rem(double a, double b);
+
+    double exp(double a, double b);
 
     template <typename F>
     void calc(

@@ -37,6 +37,10 @@ void actions::calculator() {
             else
                 math_ops::calc(op, first, second, math_ops::rem);
             break;
+
+        case math_ops::Operator::EXP:
+            math_ops::calc(op, first, second, math_ops::exp);
+            break;
     }
 }
 
