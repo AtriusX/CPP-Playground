@@ -12,7 +12,7 @@ namespace collections {
         std::size_t count;
         T* arr;
 
-        T* tryAlloc(const std::size_t size);
+        inline T* tryAlloc(const std::size_t size);
 
     public:
         List();
@@ -51,10 +51,6 @@ namespace collections {
             }
     
             return true;
-        }
-
-        inline friend bool operator!=(const List<T>& lhs, const List<T>& rhs) {
-            return !(lhs == rhs);
         }
     };
 
@@ -261,13 +257,7 @@ namespace collections {
     }
 
     template<typename T>
-    T* List<T>::tryAlloc(const std::size_t size) {
-        const auto& temp = new(std::nothrow) T[size];
-
-        if (!temp) {
-            return nullptr;
-        }
-
-        return temp;
+    inline T* List<T>::tryAlloc(const std::size_t size) {
+        return new(std::nothrow) T[size];
     }
 }
