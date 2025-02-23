@@ -146,6 +146,7 @@ namespace collections {
         }
         // Insert new element
         arr[index] = element;
+        count++;
     }
 
     template<typename T>
